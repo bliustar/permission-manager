@@ -59,7 +59,7 @@ ui:
 # permission-manager: Build go binary
 .PHONY: permission-manager
 permission-manager:
-	@CGO_ENABLED=0 GOOS=linux go build -a -o permission-manager ./cmd/run-server.go
+	@CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build -a -o permission-manager ./cmd/run-server.go
 
 ## test: Run server unit tests
 .PHONY: test
